@@ -46,12 +46,6 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0rem;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
 }
 
 /*
@@ -142,24 +136,23 @@ body {
 */
 
 .c-robot {
-  --c-robot-animationtime: 0.75s;
-  --c-robot-animation-easing: ease-in-out;
-  fill: var(--global-color-front);
-  width: 18.75rem;
-
-}
-
-.c-robot__body {
 }
 
 .c-robot__shadow {
-  opacity: 40%;
 }
 
 
 /*
     Component: Controls
 */
+.c-toggle:checked + .c-robot {
+    --c-robot-animation-play-state: paused;
+}
+
+/* body:has(input:checked) + .c-robot {
+  --c-robot-animation-play-state: paused;
+  werkt ni
+} */
 
 /*------------------------------------*\
 #UTILITIES
