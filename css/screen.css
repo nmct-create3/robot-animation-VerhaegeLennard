@@ -15,6 +15,7 @@
   --global-html-color: var(--global-color-front);
   --global-html-backgroundColor: var(--global-color-back);
   --global-selection-backgroundColor: var(--global-color-front);
+  --c-robot-animation-play-state: running;
 }
 
 /*------------------------------------*\
@@ -34,6 +35,8 @@ html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background-color: var(--global-html-backgroundColor);
 }
 
 *,
@@ -43,6 +46,12 @@ html {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0rem;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
 }
 
 /*
@@ -133,9 +142,18 @@ body {
 */
 
 .c-robot {
+  --c-robot-animationtime: 0.75s;
+  --c-robot-animation-easing: ease-in-out;
+  fill: var(--global-color-front);
+  width: 18.75rem;
+
+}
+
+.c-robot__body {
 }
 
 .c-robot__shadow {
+  opacity: 40%;
 }
 
 
