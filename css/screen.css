@@ -15,6 +15,7 @@
   --global-html-color: var(--global-color-front);
   --global-html-backgroundColor: var(--global-color-back);
   --global-selection-backgroundColor: var(--global-color-front);
+  --c-robot-animation-play-state: running;
 }
 
 /*------------------------------------*\
@@ -34,6 +35,8 @@ html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background-color: var(--global-html-backgroundColor);
 }
 
 *,
@@ -43,6 +46,11 @@ html {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0rem;
+  width: 100vw;
+  height: 100vh;
 }
 
 /*
@@ -133,15 +141,51 @@ body {
 */
 
 .c-robot {
+  --c-robot-animationtime: 0.75s;
+  --c-robot-animation-easing: ease-in-out;
+  fill: var(--global-color-front);
+  width: 18.75rem;
+
+}
+
+.c-robot__body {
+  animation: hover var(--c-robot-animationtime) infinite var(--c-robot-animation-easing) alternate var(--c-robot-animation-play-state);
 }
 
 .c-robot__shadow {
+  animation: shadow var(--c-robot-animationtime) var(--c-robot-animation-easing) infinite alternate var(--c-robot-animation-play-state);
+  fill: var(--global-color-front);
+  opacity: 40%;
+  /* transition-timing-function: cubic-bezier(0.000, 0.440, 0.070, 1.000); */
 }
 
+
+@keyframes hover {
+  100% {
+     transform: translateY(-3%);
+   }
+ }
+
+ @keyframes shadow {
+  100% {
+    opacity: 20%;
+  }
+  50% {
+    width: 20%;
+  }
+}
 
 /*
     Component: Controls
 */
+.c-toggle:checked + .c-robot {
+    --c-robot-animation-play-state: paused;
+}
+
+/* body:has(input:checked) + .c-robot {
+  --c-robot-animation-play-state: paused;
+  werkt ni
+} */
 
 /*------------------------------------*\
 #UTILITIES

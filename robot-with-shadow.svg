@@ -1,23 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Robot_master" data-name="Robot master" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<title>MCT robot</title>
-	<meta name="description" content="This is my HTML5 boilerplate." />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
 
-	<link rel="stylesheet" href="css/screen.css" />
-</head>
+      .cls-2 {
+        fill: #6dbedf;
+      }
 
-<body>
-	<input type="checkbox" name="animation" class="c-toggle" id="">
-	<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Robot_master" class="c-robot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
-	<title>MCT robot</title>
-  <ellipse id="Shadow" class="c-robot__shadow" cx="49.88" cy="118" rx="18" ry="2"/>
-  <g id="Robot" class="c-robot__body">
+      .cls-3 {
+        opacity: .1;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" width="100" height="120"/>
+  <ellipse id="Shadow" class="cls-3" cx="49.88" cy="118" rx="18" ry="2"/>
+  <g id="Robot">
     <g id="Torso">
       <path id="Arm-right" class="cls-1" d="m96.33,63.36c-.41-.72-1.33-.96-2.05-.55-1.08.63-2.29.87-3.4.67-1.01-.17-1.8-.69-2.25-1.46-.44-.76-.49-1.71-.14-2.67.39-1.06,1.2-1.98,2.28-2.61.72-.41.96-1.33.55-2.05s-1.33-.96-2.05-.55c-1.69.98-2.97,2.46-3.6,4.17-.43,1.17-.53,2.36-.3,3.48-6.79,2.82-13.8,2.22-19.71.51.88,1.13,1.64,2.37,2.26,3.67,2.49.52,4.93.78,7.3.78,4.07,0,7.93-.77,11.5-2.29.91,1.01,2.16,1.7,3.63,1.95.42.07.84.11,1.27.11,1.41,0,2.85-.39,4.14-1.14.72-.41.96-1.33.55-2.05Z"/>
       <g id="Body">
@@ -41,6 +45,3 @@
     </g>
   </g>
 </svg>
-</body>
-
-</html>
